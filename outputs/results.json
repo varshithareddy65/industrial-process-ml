@@ -1,0 +1,118 @@
+{
+  "injection": {
+    "missing_injected": 3317,
+    "outliers_injected": 974
+  },
+  "cleaning": {
+    "rows_in": 30000,
+    "missing_before": 3317,
+    "out_of_range": 24,
+    "spikes_removed": 1006,
+    "rows_out": 28443
+  },
+  "n_train": 22754,
+  "n_test": 5689,
+  "primary_model": "XGBoost",
+  "cv_rmse": {
+    "temperature_c": {
+      "Linear (raw features)": 1.8249922266746736,
+      "Linear (engineered)": 0.7464562062875632,
+      "Random Forest": 1.2266825547190086,
+      "XGBoost": 0.9296922972757535
+    },
+    "pressure_bar": {
+      "Linear (raw features)": 0.5915154055990238,
+      "Linear (engineered)": 0.30562901146477256,
+      "Random Forest": 0.4091444131033442,
+      "XGBoost": 0.3490918764503858
+    },
+    "flow_rate_m3h": {
+      "Linear (raw features)": 0.6233556723765595,
+      "Linear (engineered)": 0.3449851217866368,
+      "Random Forest": 0.4396051685428313,
+      "XGBoost": 0.3548683326821464
+    },
+    "energy_kw": {
+      "Linear (raw features)": 5.147878634995259,
+      "Linear (engineered)": 3.935872482287587,
+      "Random Forest": 6.3063488884467676,
+      "XGBoost": 5.465247104580132
+    }
+  },
+  "best_params": {
+    "temperature_c": {
+      "Random Forest": {
+        "n_estimators": 150,
+        "min_samples_leaf": 3,
+        "max_features": 0.6,
+        "max_depth": 10
+      },
+      "XGBoost": {
+        "subsample": 0.8,
+        "n_estimators": 400,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "colsample_bytree": 1.0
+      }
+    },
+    "pressure_bar": {
+      "Random Forest": {
+        "n_estimators": 150,
+        "min_samples_leaf": 3,
+        "max_features": 0.6,
+        "max_depth": 10
+      },
+      "XGBoost": {
+        "subsample": 0.8,
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "colsample_bytree": 1.0
+      }
+    },
+    "flow_rate_m3h": {
+      "Random Forest": {
+        "n_estimators": 150,
+        "min_samples_leaf": 3,
+        "max_features": 0.6,
+        "max_depth": 10
+      },
+      "XGBoost": {
+        "subsample": 0.8,
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "colsample_bytree": 1.0
+      }
+    },
+    "energy_kw": {
+      "Random Forest": {
+        "n_estimators": 150,
+        "min_samples_leaf": 3,
+        "max_features": 0.6,
+        "max_depth": 10
+      },
+      "XGBoost": {
+        "subsample": 0.8,
+        "n_estimators": 400,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "colsample_bytree": 1.0
+      }
+    }
+  },
+  "optimisation": {
+    "Linear (raw features)": {
+      "n": 8,
+      "feasible_by_model": 8,
+      "feasible_by_simulator": 0,
+      "mean_saving_pct_vs_hist": 29.293875066636833
+    },
+    "XGBoost": {
+      "n": 8,
+      "feasible_by_model": 8,
+      "feasible_by_simulator": 8,
+      "mean_saving_pct_vs_hist": 23.64966840209806
+    }
+  }
+}
